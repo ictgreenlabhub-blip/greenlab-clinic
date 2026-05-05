@@ -1,0 +1,377 @@
+
+
+/* ================= APP LAYOUT ================= */
+.app{
+    display:flex;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #2bb673, #239a60);
+    color: #fff;
+    width: 230px;
+}
+
+.sidebar a {
+    color: #eafff6;
+    padding: 12px 18px;
+    display: block;
+    border-radius: 8px;
+    margin: 5px 10px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.sidebar .active {
+    background: #ffffff;
+    color: #2bb673;
+    font-weight: bold;
+}
+
+
+/* ================= CONTENT ================= */
+.content{
+    flex: 1;
+    padding:20px;
+}
+
+/* ================= FIX WIDTH ================= */
+.row{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+.col-md-8, .col-md-4{
+    padding-left:8px;
+    padding-right:8px;
+}
+
+
+/* ================= MENU ================= */
+.menu{
+    list-style:none;
+    padding:0;
+}
+
+.menu li{
+    margin:6px 0;
+}
+
+.menu li a{
+    display:block;
+    padding:10px;
+    color:#e5e7eb;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.2s;
+}
+
+.menu li a:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.menu-title{
+    font-size:11px;
+    color:#9ca3af;
+    margin-top:15px;
+}
+
+/* ================= CARDS ================= */
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    transition: 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= HEADER ================= */
+.header{
+    background:#2563eb;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* ================= CALENDAR ================= */
+.calendar-table{
+    table-layout:fixed;
+}
+
+.calendar-table td{
+    height:75px;
+    cursor:pointer;
+    position:relative;
+    background:#ffffff;
+    transition:0.2s;
+}
+
+.calendar-table td:hover{
+    background:#e0edff;
+}
+
+.date-number{
+    font-size:12px;
+    font-weight:bold;
+    position:absolute;
+    top:5px;
+    left:6px;
+    color:#374151;
+}
+
+.calendar-event{
+    display:block;
+    width:100%;
+    font-size:10px;
+    padding:2px 5px;
+    margin-top:18px;
+    border-radius:4px;
+    background:#2563eb;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+/* STATUS COLORS */
+.calendar-event.done{
+    background:#22c55e;
+}
+
+.calendar-event.cancelled{
+    background:#ef4444;
+}
+
+/* SELECTED DAY */
+.selected-day{
+    background:#bfdbfe !important;
+}
+
+/* ================= TODAY ================= */
+.today-card {
+    background: #ffffff;
+    border-left: 5px solid #2bb673;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ================= TABLE ================= */
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #e9f9f3;
+    color: #2bb673;
+    font-weight: bold;
+}
+
+.table tbody tr:hover {
+    background: #f2fcf8;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+/* sticky header */
+.table-container thead th {
+    position: sticky;
+    top: 0;
+    background: #e9f9f3;
+    z-index: 2;
+}
+
+/* optional scrollbar design */
+.table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #2bb673;
+    border-radius: 10px;
+}
+/* ================= BUTTON ================= */
+.btn-primary {
+    
+    background: #2bb673 !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-success{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-success:hover{
+    background:#1d4ed8;
+}
+
+.badge-active {
+    background: #2bb673;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.badge-pending {
+    background: #ffc107;
+    color: #000;
+}
+
+.badge-done {
+    background: #17a2b8;
+    color: #fff;
+}
+
+
+
+
+/* SMALL MODAL (form / details) */
+.modal-box{
+    background:white;
+    padding:20px;
+    width:420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    max-width:90%;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* LARGE MODAL (optional kung PDF / preview) */
+
+.section {
+    margin-bottom: 25px;
+}
+/* CLOSE BUTTON */
+.modal-close{
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    color:#555;
+}
+
+.modal-close:hover{
+    color:red;
+}
+
+
+/* ================= SEARCH ================= */
+#historySearch{
+    font-size:12px;
+}
+
+/* ================= SMALL FIX ================= */
+.card h5{
+    margin-bottom:10px;
+}
+
+.card h6{
+    margin-bottom:8px;
+}
+
+/* remove bootstrap container limit */
+.container,
+.container-fluid {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* fix row spacing */
+.row {
+    margin: 0 !important;
+}
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+
+.modal-content-lg {
+    background: #fff;
+    width: 90%;
+    height: 90%;
+    margin: 30px auto;
+    padding: 15px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ================= MEDCERT CONTAINER ================= */
+.iframe-container {
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: auto;
+    background: #e9ecef;
+
+    padding: 40px;
+}
+.iframe-inner {
+    padding: 40px;
+}
+/* ================= A4 STYLE ================= */
+#medcertFrame {
+    width: 794px; /* A4 width */
+    height: 1123px; /* A4 height */
+
+    border: none;
+    background: #fff;
+
+    /* 🔥 ZOOM OUT */
+    transform: scale(0.70);
+    transform-origin: top center;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+  
+}
+
+
