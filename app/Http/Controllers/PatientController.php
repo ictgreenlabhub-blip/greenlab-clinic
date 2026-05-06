@@ -31,8 +31,7 @@ class PatientController extends Controller
     ->where('patients.user_id', auth()->id())
     ->whereIn('appointments.status', ['Done','Completed'])
     ->select(
-        'patients.*',
-        'appointments.status as appointment_status'
+        'patients.*'
     )
     ->get();
 
