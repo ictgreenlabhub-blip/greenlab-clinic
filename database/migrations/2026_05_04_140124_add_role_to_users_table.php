@@ -10,20 +10,16 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-    {
-        Schema::table('users', function (Blueprint $table) {
+{
+    Schema::table('users', function (Blueprint $table) {
         $table->string('role')->default('patient');
     });
+}
 
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role')
-        });
-    }
-};
+public function down()
+{
+    Schema::table('users', function (Blueprint $table) {
+        $table->dropColumn('role');
+    });
+}
+}
